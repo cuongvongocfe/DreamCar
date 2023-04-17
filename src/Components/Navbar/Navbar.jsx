@@ -19,15 +19,13 @@ function Navbar() {
     setNavbar("navbar");
   };
   // function to add a background to the Navbar when we scroll a certain height on the window
-  const [header, setHeader] = useState('header')
-  const addBg= () =>{
-    if(window.screenY >=20)(
-      setHeader('header addbg')
-    )
-  }
-
-
-  window.addEventListener('scroll', addBg)
+  const [header, setHeader] = useState("header");
+    const addBg = () =>{
+      if(window.scrollY >=20){
+        setHeader('header addBg')
+      }
+    }
+    window.addEventListener('scroll', addBg)
 
   return (
     <div className={header}>
